@@ -21,10 +21,26 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
+        <h1>Hello!</h1>
         <p>
-          Hi, I am Mehmet, a Software Developer at Trendyol Group. I design and
-          develop web and mobile application with using React, React Native,
-          Django and Nodejs.
+          I'm Mehmet, a software developer living in Istanbul.
+          <br />
+          <br />I currently work at{" "}
+          <a href="https://www.trendyol.com/" target="_blank">
+            Trendyol Group
+          </a>{" "}
+          which is the largest e-commerce platform and technology company in
+          Turkey, headquartered in Istanbul. I am working on{" "}
+          <a href="https://trendyolgo.com/" target="_blank">
+            Trendyol Go
+          </a>{" "}
+          which is an instant Delivery project (grocery, meal). I am working on
+          a mobile application used by couriers and a web app where the
+          operations team manages orders. I work with a team of highly skilled
+          engineers and PM with a agile development environment.
+          <br />
+          <br />I design and develop web and mobile application with using
+          React, Next.js, React Native, Django and Nodejs.
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
