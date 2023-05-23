@@ -55,14 +55,19 @@ export default function Layout({
           href="https://github.com/MehmetCanBOZ"
           rel="noopener noreferrer"
         >
-          <Image src="/assets/github.svg" height={50} width={50} />
+          <Image src="/assets/github.svg" height={50} width={50} alt="github" />
         </a>
         <a
           target="_blank"
           href="https://www.linkedin.com/in/mehmet-can-boz/"
           rel="noopener noreferrer"
         >
-          <Image src="/assets/linkedin.svg" height={50} width={50} />
+          <Image
+            src="/assets/linkedin.svg"
+            height={50}
+            width={50}
+            alt="linkedin"
+          />
         </a>
       </div>
     </div>
