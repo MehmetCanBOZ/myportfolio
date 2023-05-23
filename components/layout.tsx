@@ -1,8 +1,8 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import Menu from "./menu";
 
 const name = "Mehmet Can BOZ";
 export const siteTitle = "Next.js Sample Website";
@@ -15,7 +15,7 @@ export default function Layout({
   home?: boolean;
 }) {
   return (
-    <div className={styles.container}>
+    <div className="max-w-2xl mt-12 mb-24 mx-auto px-4 py-0">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -31,45 +31,40 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt={name}
-              />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
-          </>
-        )}
+      <header className="flex flex-col items-center">
+        <Image
+          priority
+          src="/images/profile.jpg"
+          className="rounded-full"
+          height={144}
+          width={144}
+          alt={name}
+        />
+        <h1 className="text-4xl font-bold">{name}</h1>
       </header>
+      <Menu />
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div className="mt-12 mb-0 mx-0">
           <Link href="/">← Back to home</Link>
         </div>
       )}
+      <div className="flex items-center justify-center mt-4 gap-12">
+        <a
+          target="_blank"
+          href="https://github.com/MehmetCanBOZ"
+          rel="noopener noreferrer"
+        >
+          <Image src="/assets/github.svg" height={50} width={50} />
+        </a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/mehmet-can-boz/"
+          rel="noopener noreferrer"
+        >
+          <Image src="/assets/linkedin.svg" height={50} width={50} />
+        </a>
+      </div>
     </div>
   );
 }

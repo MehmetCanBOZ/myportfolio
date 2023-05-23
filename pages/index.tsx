@@ -20,8 +20,8 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <h1>Hello!</h1>
+      <section className="text-xl">
+        <h1 className="text-2xl font-bold mb-2">Hello!</h1>
         <p>
           I'm Mehmet, a software developer living in Istanbul.
           <br />
@@ -34,7 +34,7 @@ export default function Home({
           <a href="https://trendyolgo.com/" target="_blank">
             Trendyol Go
           </a>{" "}
-          which is an instant Delivery project (grocery, meal). I am working on
+          which is an instant delivery project (grocery, meal). I am working on
           a mobile application used by couriers and a web app where the
           operations team manages orders. I work with a team of highly skilled
           engineers and PM with a agile development environment.
@@ -42,20 +42,6 @@ export default function Home({
           <br />I design and develop web and mobile application with using
           React, Next.js, React Native, Django and Nodejs.
         </p>
-      </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
       </section>
     </Layout>
   );
