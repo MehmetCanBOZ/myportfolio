@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import axios from "axios";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -67,3 +68,27 @@ export async function getPostData(id: string) {
     ...(matterResult.data as { date: string; title: string }),
   };
 }
+
+type Article = {
+  titles: string;
+  link: string;
+  pubDate: string;
+};
+
+type Blogs = {
+  items: Article[];
+};
+
+export const fetchMediumBlogs = async (): Promise<Article[]> => {
+  const url =
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mcboz";
+
+  try {
+    const response = await axios.get<Blogs>(url);
+    const { items } = response.data;
+    return items;
+  } catch (error) {
+    console.error("Error fetching Medium feed:", error);
+    return [];
+  }
+};
