@@ -1,7 +1,6 @@
-import React from "react";
-import Layout from "../../components/layout";
-import { fetchMediumBlogs } from "../../lib/posts";
-import { GetStaticProps } from "next";
+import React from 'react';
+import Layout from '../../components/layout';
+import { fetchMediumBlogs } from '../../lib/posts';
 
 type Article = {
   title: string;

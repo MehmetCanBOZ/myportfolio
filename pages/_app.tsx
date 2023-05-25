@@ -1,12 +1,13 @@
-import "../styles/global.css";
-import { AppProps } from "next/app";
-import { Roboto_Mono } from "next/font/google";
+/* eslint-disable react/jsx-props-no-spreading */
+import '../styles/global.css';
+import { AppProps } from 'next/app';
+import { Roboto_Mono } from 'next/font/google';
 
 const roboto = Roboto_Mono({
-  weight: "400",
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  display: "swap",
+  weight: '400',
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 export default function App({ Component, pageProps }: AppProps) {
