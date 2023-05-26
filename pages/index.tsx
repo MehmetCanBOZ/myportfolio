@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/quotes */
 /* eslint-disable react/jsx-one-expression-per-line */
 import Head from 'next/head';
-
 import Layout, { siteTitle } from '../components/layout';
-import { getSortedPostsData } from '../lib/posts';
 
 export default function Home() {
   return (
@@ -42,12 +40,3 @@ export default function Home() {
     </Layout>
   );
 }
-
-export const getStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-};
