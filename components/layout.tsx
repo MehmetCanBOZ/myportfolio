@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Menu from './menu';
 
 const name = 'Mehmet Can BOZ';
-export const siteTitle = 'Mehmet Can BOZ';
+export const siteTitle = 'Mehmet Can BOZ dev';
 
 type LayoutProps = {
   children: React.ReactNode;
