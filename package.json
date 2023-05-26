@@ -7,7 +7,7 @@
     "lint": "next lint",
     "prepare": "husky install",
     "test": "npm run build",
-    "lint:all": "eslint '**/*.ts' '**/*.tsx' --fix",
+    "lint:all": "eslint --fix",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "format:all": "prettier --write 'src/**/*.js'"
