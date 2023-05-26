@@ -33,7 +33,7 @@ export default function Home() {
           used by couriers and a web app where the operations team manages orders. I work with a
           team of highly skilled engineers and PM with a agile development environment.
           <br />
-          <br />I design and develop web and mobile application with using React, Next.js, React
+          <br />I design and develop web and mobile applications with using React, Next.js, React
           Native, Django and Nodejs.
         </p>
       </section>
