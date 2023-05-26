@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import Menu from './menu';
 
 const name = 'Mehmet Can BOZ';
@@ -9,10 +8,9 @@ export const siteTitle = 'Next.js Sample Website';
 
 type LayoutProps = {
   children: React.ReactNode;
-  home?: boolean;
 };
 
-const Layout: React.FC<LayoutProps> = ({ children, home = false }) => (
+const Layout: React.FC<LayoutProps> = ({ children }) => (
   <div className="max-w-2xl mt-12 mb-24 mx-auto px-4 py-0">
     <Head>
       <link
@@ -51,12 +49,7 @@ const Layout: React.FC<LayoutProps> = ({ children, home = false }) => (
     </header>
     <Menu />
     <main>{children}</main>
-    {!home && (
-      <div className="mt-12 mb-0 mx-0">
-        <Link href="/">← Back to home</Link>
-      </div>
-    )}
-    <div className="flex items-center justify-center mt-4 gap-12">
+    <div className="flex items-center justify-center mt-8 gap-12">
       <a
         target="_blank"
         href="https://github.com/MehmetCanBOZ"
