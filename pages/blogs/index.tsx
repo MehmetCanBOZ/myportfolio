@@ -8,6 +8,7 @@ type Article = {
   title: string;
   link: string;
   pubDate: string;
+  thumbnail: string;
 };
 
 type Props = {
@@ -21,7 +22,7 @@ function Blogs({ articles }: Props) {
         <ul>
           {articles.map((article) => (
             <a
-              key={article}
+              key={article.link}
               target="_blank"
               href={article.link}
               rel="noopener noreferrer"
@@ -34,7 +35,7 @@ function Blogs({ articles }: Props) {
                   className="rounded-full"
                   height={140}
                   width={140}
-                  alt={article}
+                  alt={article.title}
                 />
                 <div>
                   <li
